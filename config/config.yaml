@@ -1,0 +1,33 @@
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip
+  local_data_file: artifacts/data_ingestion/data.zip
+  unzip_dir: artifacts/data_ingestion
+
+data_loading:
+  root_dir: artifacts/data_loading
+  data_path: artifacts/data_ingestion/winequality-red.csv
+
+data_validation:
+  root_dir: artifacts/data_validation
+  status_file: artifacts/data_validation/status.txt
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  test_size: 0.2
+
+model_training:
+  root_dir: artifacts/model_train
+  model_name: model
+  model_store_type: joblib
+  algorithm: ElasticNet
+  ml_type: regression
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  metrics_filepath: artifacts/model_evaluation/metrics.json
+  mlflow_uri: http:/127.0.0.1:5000
+  

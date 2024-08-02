@@ -1,0 +1,13 @@
+numpy < 2.0
+pandas
+mlflow
+notebook
+scikit-learn
+matplotlib
+python-box
+pyYAML
+tqdm
+ensure
+joblib 
+types-PyYAML
+dagshub

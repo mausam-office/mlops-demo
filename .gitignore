@@ -1,0 +1,6 @@
+*pyc
+src/.venv/
+artifacts/
+logs/
+mlruns/
+research/
