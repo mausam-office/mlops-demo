@@ -15,7 +15,7 @@ from src.ml_project.utils.common import save_json, load_bin
 from urllib.parse import urlparse
 
 
-patch_mlflow()
+# patch_mlflow()
 
 class ModelEvaluation:
     def __init__(self, config: ModelEvaluationConfig) -> None:
@@ -24,7 +24,7 @@ class ModelEvaluation:
     def evaluate(self, model_path, X_test, y_test):
         algo, train_params = self.get_train_params()
 
-        dagshub.init(repo_owner='dev.ai-rl', repo_name='mlops-demo', mlflow=True)
+        dagshub.init(repo_owner='dev.ai-rl', repo_name='mlops-demo', mlflow=True, patch_mlflow=True)
 
         mlflow.set_registry_uri(self.config.mlflow_uri)
         print(f"{self.config.mlflow_uri=}")
