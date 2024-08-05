@@ -29,5 +29,5 @@ model_training:
 model_evaluation:
   root_dir: artifacts/model_evaluation
   metrics_filepath: artifacts/model_evaluation/metrics.json
-  mlflow_uri: http:/127.0.0.1:5000
+  mlflow_uri: https://dagshub.com/dev.ai-rl/mlops-demo.mlflow
   

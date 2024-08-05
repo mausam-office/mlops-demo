@@ -1,7 +1,6 @@
 numpy < 2.0
 pandas
 mlflow
-notebook
 scikit-learn
 matplotlib
 python-box
@@ -10,4 +9,4 @@ tqdm
 ensure
 joblib 
 types-PyYAML
-dagshub
+dagshub==0.3.34
