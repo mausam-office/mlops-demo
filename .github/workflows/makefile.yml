@@ -15,3 +15,7 @@ jobs:
 
     - name: create virtual env and install dependencies
       run: make venv
+
+    - name: Test
+      run: make test
+
