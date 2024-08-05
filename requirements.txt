@@ -10,3 +10,5 @@ ensure
 joblib 
 types-PyYAML
 dagshub==0.3.34
+pytest
+requests

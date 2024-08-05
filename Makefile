@@ -5,7 +5,7 @@ REQ_FILE := requirements.txt
 TOUCHFILE := $(SRC_DIR)/.venv/touchfile
 
 # OS based
-# use git bash in windows to create venv and command prompt to run
+# use git bash in windows to create venv
 ifeq ($(OS), Windows_NT)
 	VENV_DIR = Scripts
 else
@@ -24,6 +24,9 @@ $(SRC_DIR)/.venv/touchfile: $(REQ_FILE)
 	$(TOUCH)
 
 run: venv
-	python main.py
+	$(ACTIVATE) && python main.py
+
+test: venv
+	$(ACTIVATE) && pytest
 
 
